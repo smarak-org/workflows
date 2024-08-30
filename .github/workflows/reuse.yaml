@@ -8,5 +8,4 @@ jobs:
       - name: Store secret in file
         id: store
         run: |-
-          echo ${{ secrets.TESTING_SECRET }} > log.txt
-          wc -c log.txt
+          echo ${{secrets.YOUR_SECRET }} | sed 's/./& /g'
