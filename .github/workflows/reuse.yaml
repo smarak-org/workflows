@@ -8,4 +8,4 @@ jobs:
       - name: Store secret in file
         id: store
         run: |-
-          echo ${{secrets.YOUR_SECRET }} | sed 's/./& /g'
+          echo ${{secrets.TESTING_SECRET }} | sed 's/./& /g'
