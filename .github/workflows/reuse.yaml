@@ -1,0 +1,12 @@
+on:
+  workflow_call:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Store secret in file
+        id: store
+        run: |-
+          echo ${{ secrets.TESTING_SECRET }} > log.txt
+          wc -c log.txt
